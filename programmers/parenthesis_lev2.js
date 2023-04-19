@@ -20,4 +20,4 @@ function solution(s) {
   }
   return answer;
 }
-solution("(())()");
+//console.log(solution("(())()"));
