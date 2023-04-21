@@ -1,4 +1,5 @@
 const solution = (s) => {
+    while(s)
   return [...s].filter((e) => e === "1").length.toString(2);
 };
 
