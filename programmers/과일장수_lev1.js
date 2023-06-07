@@ -2,10 +2,11 @@ function solution(k, m, score) {
   var answer = 0;
   score.sort((a, b) => b - a);
   const n = Math.floor(score.length / m);
-  for (let i = 0; i < n; i++) {
-    let a = score.splice(0, m);
-    answer += a[m - 1] * m;
+  for (let i = m - 1; i < score.length; i += m) {
+    answer += score[i] * m;
   }
 
   return answer;
 }
+console.log(solution(3, 4, [1, 2, 3, 1, 2, 3, 1]));
+console.log(solution(4, 3, [4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2]));
