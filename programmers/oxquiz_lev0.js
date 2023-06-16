@@ -7,4 +7,4 @@ function solution(quiz) {
 
   return answer;
 }
-console.log(solution(["3 - 4 = -3", "5 + 6 = 11"]));
+//console.log(solution(["3 - 4 = -3", "5 + 6 = 11"]));
