@@ -12,29 +12,23 @@ const obj1 = {
     console.log("function this:", this);
   },
   getNameWithArrowFunciton: () => {
-    console.log(this.name);
-    console.log("arrow function this:", this);
+    console.log(this.name);//undefined가 나온다
+    console.log("arrow function this:", this); .
   },
 };
 
 obj1.getLastName();
 obj1.getLastNameFunction();
-obj1.getNameWithArrowFunciton(); **/
-const b = 25;
+obj1.getNameWithArrowFunciton();  **/
 const obj2 = {
   id: 1,
   name: "채민석",
   age: 25,
 };
 //const id =obj2.id;
-//const id =obj2.id;
-//const id =obj2.id;
-obj2.habit = "soccer";
-console.log(obj2);
-const { id, name, age } = obj2;
-
-console.log(age);
-
-const arr1 = [1, "민석", 25];
-const [번호, 이름, 나이] = arr1;
-console.log(번호);
+//const name =obj2.name ;
+//const age =obj2.age;
+let a = 1;
+let b = 2;
+[a, b] = [b, a];
+console.log(a);
