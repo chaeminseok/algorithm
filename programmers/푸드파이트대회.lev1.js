@@ -1,19 +1,12 @@
 function solution(food) {
-  food.shift();
   let arr = [];
-  let obj = {};
-  for (let i = 0; i < food.length; i++) {
-    obj[i + 1] = Math.floor(food[i] / 2);
-  }
-  food.forEach((e, i) => {
-    if (obj[i + 1] > 0) {
-      for (let j = 0; j < obj[i + 1]; j++) {
-        arr.push(i + 1);
+  for (let i = 1; i < food.length; i++) {
+    if (food[i] > 0) {
+      for (j = 0; j < Math.floor(food[i] / 2); j++) {
+        arr.push(i);
       }
     }
-  });
-  arr = [...arr, 0, ...arr.reverse()];
-  var answer = [...arr].join("");
-  return answer;
+  }
+  return arr.concat(0, [...arr].reverse()).join("");
 }
 console.log(solution([1, 3, 4, 6]));
