@@ -1,18 +1,12 @@
 function solution(ingredient) {
-  let cnt = 0;
-  for (let i = 3; i < ingredient.length; i += 1) {
-    const now = ingredient[i];
-    if (
-      now === 1 &&
-      ingredient[i - 1] === 3 &&
-      ingredient[i - 2] === 2 &&
-      ingredient[i - 3] === 1
-    ) {
-      ingredient.splice(i - 3, 4);
-      cnt += 1;
+  let result = 0;
+  for (let i = 0; i < ingredient.length; i++) {
+    if (ingredient.slice(i, i + 4).join("") === "1231") {
+      result++;
+
+      ingredient.splice(i, 4);
       i -= 4;
     }
   }
-  return cnt;
+  return result;
 }
-console.log(solution([2, 1, 1, 2, 3, 1, 2, 3, 1]));
