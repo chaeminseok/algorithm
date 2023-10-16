@@ -1,4 +1,8 @@
 function solution(n) {
-  let reversed_N = n.toString(3).split("").reverse().join("");
-  return parseInt(reversed_N, 3);
+  const answer = [];
+  while (n !== 0) {
+    answer.unshift(n % 3);
+    n = Math.floor(n / 3);
+  }
+  return answer.reduce((acc, v, i) => acc + v * Math.pow(3, i), 0);
 }
