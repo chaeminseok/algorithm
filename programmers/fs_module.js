@@ -1,9 +1,9 @@
-const fs = require("fs");
+// let fs = require("fs");
 
-const [n, ...lines] = fs
-  .readFileSync("input.txt", "utf-8")
+// let input = fs.readFileSync("input.txt").toString().trim().split("\n");
+// console.log(input);
+const [n, ...arr] = require("fs")
+  .readFileSync("input.txt")
+  .toString()
   .trim()
-  .split("\r\n");
-
-console.log(n);
-console.log(`arr은 ${lines}`);
+  .split("\n");

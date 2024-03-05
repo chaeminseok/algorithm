@@ -18,4 +18,5 @@ rl.on("line", function (line) {
       })
       .join("")
   );
+  process.exit;
 });
